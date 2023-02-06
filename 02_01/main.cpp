@@ -9,19 +9,7 @@ using namespace std;
 int main()
 {
 #pragma region
-	/*std::list<int>lst(33, 4);*/
-	//list<int>lst{114, 514, 364};//初期設定リスト
-
-	//lst.push_front(7);
-	//lst.push_back(777);
-	//for (int i = 0; i < 5; i++)
-	//{
-	//	lst.push_front(i);
-	//}
-	//for (int i = 0; i < 5; i++)
-	//{
-	//	lst.push_back(i);
-	//}
+	
 #pragma endregion
 
 	list<const char*>Station = { "Tokyo","Kanda","Akihabara","Okachimachi","Ueno","Uguisudani",
@@ -40,9 +28,9 @@ int main()
 	//西日暮里を追加
 	for (auto itr = Station.begin(); itr != Station.end(); ++itr)
 	{
-		if (*itr == "Tabata")
+		if (strcmp(*itr,"Tabata")==0)
 		{
-			itr = Station.insert(itr, "Nishinippori");
+			Station.insert(itr, "Nishinippori");
 			itr++;
 		}
 	}
@@ -56,9 +44,9 @@ int main()
 	//高輪ゲートウェイを追加
 	for (auto itr = Station.begin(); itr != Station.end(); ++itr)
 	{
-		if (*itr == "Tamachi")
+		if (strcmp(*itr, "Tamachi")==0)
 		{
-			itr = Station.insert(itr, "Takanawa Gateway");
+			Station.insert(itr, "Takanawa Gateway");
 			itr++;
 		}
 	}
